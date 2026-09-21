@@ -1,0 +1,97 @@
+{
+  "schema": "codebrix.model-provenance/1",
+  "stagedAtUtc": "2026-09-20T21:05:26.5004499Z",
+  "upstream": {
+    "name": "hf.co/skytnt/midi-model-tv2o-medium:onnx-only",
+    "repository": "skytnt/midi-model-tv2o-medium",
+    "address": "https://huggingface.co/skytnt/midi-model-tv2o-medium",
+    "requestedRevision": "0f8f265d4330f4e46527ac2313200254c5757f5f",
+    "resolvedRevision": "0f8f265d4330f4e46527ac2313200254c5757f5f",
+    "source": "hf.co",
+    "pulledAtUtc": "2026-09-20T21:05:22.8254424Z",
+    "licenseId": "apache-2.0",
+    "licenseSource": "https://huggingface.co/skytnt/midi-model-tv2o-medium",
+    "format": "onnx",
+    "files": [
+      {
+        "path": "README.md",
+        "bytes": 1279,
+        "sha256": "2510e691d4da9fd0647c6c6a226f721a84df5676f56f227abc0ff3b6da471abc"
+      },
+      {
+        "path": "config.json",
+        "bytes": 2016,
+        "sha256": "1f393e1e8c630ddc81a976348ee246549d613f0a117dc0622eed49918dfcb511"
+      },
+      {
+        "path": "generation_config.json",
+        "bytes": 69,
+        "sha256": "e367d0feb45ba71e180b151aaf976961ce48b0a70ba8ed47bf7deba0dae273a3"
+      },
+      {
+        "path": "onnx/model_base.onnx",
+        "bytes": 821713887,
+        "sha256": "1af68e16a0509936caeb70d322ab30619d784c7af72df019f3a59276c67c1bc4"
+      },
+      {
+        "path": "onnx/model_token.onnx",
+        "bytes": 116661381,
+        "sha256": "cce9376abe8f5c8d51d1b110580cc8501d38679af55ebd5a332e757e62ab9911"
+      }
+    ]
+  },
+  "steps": [
+    {
+      "step": "reduce",
+      "operation": "IModelStore.ReduceOnnxAsync",
+      "storedName": "hf.co/skytnt/midi-model-tv2o-medium:onnx-int4",
+      "derivedFrom": "hf.co/skytnt/midi-model-tv2o-medium:onnx-only",
+      "tool": "CodeBrix.Ollama.ModelManager",
+      "toolVersion": "1.0.262.1044",
+      "settings": {
+        "mode": "WeightOnlyInt4",
+        "engine": "Managed",
+        "requestedEngine": "Managed",
+        "preprocess": "false",
+        "blockSize": "128",
+        "isSymmetric": "false",
+        "accuracyLevel": "",
+        "files": "onnx/model_base.onnx,onnx/model_token.onnx"
+      }
+    }
+  ],
+  "artifact": {
+    "folder": "staging/output",
+    "files": [
+      {
+        "name": "config.json",
+        "bytes": 2016,
+        "sha256": "1f393e1e8c630ddc81a976348ee246549d613f0a117dc0622eed49918dfcb511"
+      },
+      {
+        "name": "generation_config.json",
+        "bytes": 69,
+        "sha256": "e367d0feb45ba71e180b151aaf976961ce48b0a70ba8ed47bf7deba0dae273a3"
+      },
+      {
+        "name": "model_base.onnx",
+        "bytes": 123950877,
+        "sha256": "c772d6c8b5b927ab5d81498075f2c900d4bdbedbed99d4240e918856b62cf272"
+      },
+      {
+        "name": "model_token.onnx",
+        "bytes": 28229659,
+        "sha256": "e5a7182ad4a72dd74e5422f25a95985dfad2514e2269036b66b63037abfe9227"
+      }
+    ],
+    "totalBytes": 152182621
+  },
+  "stagedOn": {
+    "operatingSystem": "LMDE 7 (gigi)",
+    "runtimeIdentifier": "linux-x64",
+    "processArchitecture": "X64",
+    "processor": "12th Gen Intel(R) Core(TM) i7-12850HX",
+    "processorCount": 24,
+    "framework": ".NET 10.0.12"
+  }
+}
