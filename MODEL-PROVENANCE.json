@@ -1,6 +1,6 @@
 {
   "schema": "codebrix.model-provenance/1",
-  "stagedAtUtc": "2026-09-20T21:05:26.5004499Z",
+  "stagedAtUtc": "2026-09-21T04:52:46.3494347Z",
   "upstream": {
     "name": "hf.co/skytnt/midi-model-tv2o-medium:onnx-only",
     "repository": "skytnt/midi-model-tv2o-medium",
@@ -8,7 +8,7 @@
     "requestedRevision": "0f8f265d4330f4e46527ac2313200254c5757f5f",
     "resolvedRevision": "0f8f265d4330f4e46527ac2313200254c5757f5f",
     "source": "hf.co",
-    "pulledAtUtc": "2026-09-20T21:05:22.8254424Z",
+    "pulledAtUtc": "2026-09-21T04:52:41.7883733Z",
     "licenseId": "apache-2.0",
     "licenseSource": "https://huggingface.co/skytnt/midi-model-tv2o-medium",
     "format": "onnx",
@@ -87,8 +87,8 @@
     "totalBytes": 152182621
   },
   "stagedOn": {
-    "operatingSystem": "LMDE 7 (gigi)",
-    "runtimeIdentifier": "linux-x64",
+    "operatingSystem": "Microsoft Windows 10.0.26200",
+    "runtimeIdentifier": "win-x64",
     "processArchitecture": "X64",
     "processor": "12th Gen Intel(R) Core(TM) i7-12850HX",
     "processorCount": 24,
