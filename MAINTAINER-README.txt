@@ -100,5 +100,9 @@ prepared model package uses standard UTC versioning (1.0.266.218); inspection,
 all direct/intermediary consumer layouts and generation/audio from packaged
 artifacts pass. Accepted model hashes and Windows provenance are unchanged.
 See TestResults/published-core-1.0.266.178-* and the session PLAN for evidence.
-The model package is prepared for Jeremy's publication; it has not been published
-by this session. The previous package listening acceptances remain in effect.
+Jeremy subsequently published SkyTNT 1.0.266.271. MusicGeneration's core tests now
+reference both published model packages and use their copied assets without
+staging-path variables. All 41 short model checks run normally; final Debug/Release
+and all 12 direct/intermediary consumer layouts pass. Long/audible tests remain
+opt-in, and the previous listening acceptances remain in effect. See the session
+PLAN and core TestResults/published-models-* for the final adoption evidence.
