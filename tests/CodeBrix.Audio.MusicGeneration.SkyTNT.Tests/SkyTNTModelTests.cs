@@ -27,7 +27,11 @@ public class SkyTNTModelTests
         // Assert
         files.Keys.Should().BeEquivalentTo(SkyTNTModel.FileNames);
         foreach (var pair in files)
-            pair.Value.Should().Be(Path.Combine(root, SkyTNTModel.RelativeModelDirectory, pair.Key));
+        {
+            // Segments are combined separately so the expectation uses the native separator on every OS.
+            Path.IsPathRooted(pair.Value).Should().BeTrue();
+            pair.Value.Should().Be(Path.Combine(root, "Models", "CodeBrix.Audio.MusicGeneration.SkyTNT", pair.Key));
+        }
         SkyTNTModel.RelativeModelDirectory.Should().Be("Models/CodeBrix.Audio.MusicGeneration.SkyTNT");
         var mutable = (IDictionary<string, string>)files;
         Action change = () => mutable.Add("extra", "elsewhere");
