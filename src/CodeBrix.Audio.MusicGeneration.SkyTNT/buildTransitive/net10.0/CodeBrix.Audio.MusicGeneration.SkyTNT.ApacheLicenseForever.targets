@@ -1,0 +1,16 @@
+<Project>
+  <!-- Follows FluidR3Gm's transitive asset pattern, with a model-specific output directory. -->
+  <PropertyGroup>
+    <CodeBrixSkyTNTCopyAssetsToOutput Condition="'$(CodeBrixSkyTNTCopyAssetsToOutput)' == ''">true</CodeBrixSkyTNTCopyAssetsToOutput>
+    <CodeBrixSkyTNTAssetsDirectory Condition="'$(CodeBrixSkyTNTAssetsDirectory)' == ''">$([MSBuild]::NormalizeDirectory('$(MSBuildThisFileDirectory)', '..', '..', 'assets'))</CodeBrixSkyTNTAssetsDirectory>
+  </PropertyGroup>
+  <ItemGroup Condition="'$(CodeBrixSkyTNTCopyAssetsToOutput)' == 'true'">
+    <None Include="$(CodeBrixSkyTNTAssetsDirectory)**/*">
+      <Link>Models/CodeBrix.Audio.MusicGeneration.SkyTNT/%(RecursiveDir)%(Filename)%(Extension)</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <Pack>false</Pack>
+      <Visible>false</Visible>
+    </None>
+  </ItemGroup>
+</Project>

@@ -19,7 +19,7 @@
     the int4 reduction is the model library's own managed code.
   -->
   <ItemGroup>
-    <PackageReference Include="CodeBrix.Ollama.ModelManager.MitLicenseForever" Version="1.0.262.1044" />
+    <PackageReference Include="CodeBrix.Ollama.ModelManager.MitLicenseForever" Version="1.0.266.110" />
   </ItemGroup>
 
 </Project>

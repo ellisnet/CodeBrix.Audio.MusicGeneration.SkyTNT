@@ -1,0 +1,19 @@
+CodeBrix.Audio.MusicGeneration.SkyTNT: model and source notices
+=====================================
+
+Wrapper code: Copyright (c) 2026 Jeremy Ellis and contributors, Apache-2.0.
+Complete license text: LICENSE (LICENSE.txt beside the deployed model).
+
+Model publisher: skytnt/midi-model-tv2o-medium
+Pinned source: https://huggingface.co/skytnt/midi-model-tv2o-medium/tree/0f8f265d4330f4e46527ac2313200254c5757f5f
+The publisher identifies the model license as Apache-2.0 in its model card.
+MODEL-CARD.md is the original, unmodified README from that revision. Its SHA256
+is 2510e691d4da9fd0647c6c6a226f721a84df5676f56f227abc0ff3b6da471abc. The complete model card and license travel with the assets.
+
+Modifications: both ONNX graphs reduced with managed weight-only INT4, block size 128, asymmetric weights.
+MODEL-PROVENANCE.json records inputs, hashes, settings, tool versions and staging
+platform. Inference artifacts total 152,182,621 bytes. No training data is included.
+
+The package does not contain the upstream training implementation or a Python
+runtime. Runtime inference comes through the MusicGeneration dependency and its
+ModelRunner package; those packages carry their own component notices.
