@@ -2,7 +2,7 @@ CodeBrix.Audio.MusicGeneration.SkyTNT: model and source notices
 =====================================
 
 Wrapper code: Copyright (c) 2026 Jeremy Ellis and contributors, Apache-2.0.
-Complete license text: LICENSE (LICENSE.txt beside the deployed model).
+Complete license text: LICENSE (also deployed as LICENSE beside the model).
 
 Model publisher: skytnt/midi-model-tv2o-medium
 Pinned source: https://huggingface.co/skytnt/midi-model-tv2o-medium/tree/0f8f265d4330f4e46527ac2313200254c5757f5f
